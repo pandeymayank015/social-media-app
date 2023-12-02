@@ -27,8 +27,9 @@ import SearchView from "./components/views/SearchView";
 import MessengerView from "./components/views/MessengerView";
 import { initiateSocketConnection, socket } from "./helpers/socketHelper";
 import { useEffect } from "react";
-import { BASE_URL } from "./config";
+//import { process.env.BASE_URL } from "./config";
 import { io } from "socket.io-client";
+
 
 function App() {
   initiateSocketConnection();

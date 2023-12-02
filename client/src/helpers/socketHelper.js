@@ -1,5 +1,5 @@
 import { io } from "socket.io-client";
-import { BASE_URL } from "../config";
+//import { process.env.BASE_URL } from "../config";
 import { isLoggedIn } from "./authHelper";
 
 export let socket;
@@ -7,7 +7,7 @@ export let socket;
 export const initiateSocketConnection = () => {
   const user = isLoggedIn();
 
-  socket = io(BASE_URL, {
+  socket = io(process.env.BASE_URL, {
     auth: {
       token: user && user.token,
     },
